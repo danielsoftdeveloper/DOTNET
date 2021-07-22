@@ -1,51 +1,98 @@
 ﻿using System;
-
 namespace DIO.Series
 {
     class Program
     {
+        static SerieRepositorio repositorio = new SerieRepositorio();
         static void Main(string[] args)
         {
-             string opcaoUsuario = ObterOpcaoUsuario();
+            string opcaoUsuario = ObterOpcaoUsuario();
 
-			while (opcaoUsuario.ToUpper() != "X")
-			{
-				switch (opcaoUsuario)
-				{
-					case "1":
-						//ListarSeries();
-                        Console.WriteLine(" entrou no case 1");
-						break;
-					case "2":
-						//InserirSerie();
-                         Console.WriteLine(" entrou no case 2");
-						break;
-					case "3":
-						//AtualizarSerie();
-                         Console.WriteLine(" entrou no case 3");
-						break;
-					case "4":
-						//ExcluirSerie();
-                         Console.WriteLine(" entrou no case 4");
-						break;
-					case "5":
-						//VisualizarSerie();
-                         Console.WriteLine(" entrou no case 5");
-						break;
-					case "C":
-						Console.Clear();
-						break;
+            while (opcaoUsuario.ToUpper() != "X")
+            {
+                switch (opcaoUsuario)
+                {
+                    case "1":
+                        ListarSeries();
+                        break;
+                    case "2":
+                        InserirSerie();
+                        break;
+                    case "3":
+                        //AtualizarSerie();
+                        Console.WriteLine(" entrou no case 3");
+                        break;
+                    case "4":
+                        //ExcluirSerie();
+                        Console.WriteLine(" entrou no case 4");
+                        break;
+                    case "5":
+                        //VisualizarSerie();
+                        Console.WriteLine(" entrou no case 5");
+                        break;
+                    case "C":
+                        Console.Clear();
+                        break;
 
-					default:
-						throw new ArgumentOutOfRangeException();
-				}
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
 
-				opcaoUsuario = ObterOpcaoUsuario();
-			}
+                opcaoUsuario = ObterOpcaoUsuario();
+            }
 
-			Console.WriteLine("Obrigado atualizar nossos cadastro de serviços.");
-			Console.ReadLine();
+            Console.WriteLine("Obrigado atualizar nossos cadastro de serviços.");
+            Console.ReadLine();
         }
+
+        private static void ListarSeries()
+        {
+            Console.WriteLine("Listar séries cadastradas");
+            var lista = repositorio.Lista();
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("Nenhuma série cadastradas");
+                return;
+            }
+
+            foreach (var serie in lista)
+            {
+                Console.WriteLine("#ID {0}: - {1}", serie.retornaId(), serie.retornaTitulo());
+               // Console.WriteLine("#ID {0}: - {1}", Serie.retornaId(), Serie.retornaTitulo());
+            }
+
+        }  
+  
+    private static void InserirSerie()
+        {
+            Console.WriteLine("Inserir nova série");
+
+           
+            foreach (int i in Enum.GetValues(typeof(Genero)))
+            {
+                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
+            }
+            Console.Write("Digite o gênero entre as opções acima: ");
+            int entradaGenero = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o Título da Série: ");
+            string entradaTitulo = Console.ReadLine();
+
+            Console.Write("Digite o Ano de Início da Série: ");
+            int entradaAno = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a Descrição da Série: ");
+            string entradaDescricao = Console.ReadLine();
+
+            Serie novaSerie = new Serie(id: repositorio.ProximoId(),
+                                        genero: (Genero)entradaGenero,
+                                        titulo: entradaTitulo,
+                                        ano: entradaAno,
+                                        descricao: entradaDescricao);
+
+            repositorio.Insere(novaSerie);
+        }
+
 
         private static string ObterOpcaoUsuario()
         {
