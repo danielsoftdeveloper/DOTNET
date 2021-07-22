@@ -1,0 +1,13 @@
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.deps.json
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.runtimeconfig.json
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.runtimeconfig.dev.json
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.dll
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.pdb
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.csprojAssemblyReference.cache
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.AssemblyInfoInputs.cache
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.AssemblyInfo.cs
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.csproj.CoreCompileInputs.cache
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.dll
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.pdb
+/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.genruntimeconfig.cache

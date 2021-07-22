@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HbwEsquzrYPIynCOHKHjtCugKXQoL3X383B1m03TJjdP3ORI/Bi1NB0UKR7UxptjkbYvVQNDqgvAfqoOCA+8vg==",
+  "dgSpecHash": "hkKHKLLp8cm7UKSUGz0V1X0EyxTBu9KtecKaIfIibB6G4Id8qfoEGt1H7jHy/JV1g7GAVCBrFGReONcTDgwbhA==",
   "success": true,
-  "projectFilePath": "/home/daniel/workspaceDotnet/DIO/DIO.Series/DIO.Series.csproj",
+  "projectFilePath": "/home/daniel/workspaceDotnet/DOTNET/DIO.Series/DIO.Series.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

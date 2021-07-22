@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/daniel/workspaceDotnet/DIO/DIO.Series/DIO.Series.csproj",
+      "projectUniqueName": "/home/daniel/workspaceDotnet/DOTNET/DIO.Series/DIO.Series.csproj",
       "projectName": "DIO.Series",
-      "projectPath": "/home/daniel/workspaceDotnet/DIO/DIO.Series/DIO.Series.csproj",
+      "projectPath": "/home/daniel/workspaceDotnet/DOTNET/DIO.Series/DIO.Series.csproj",
       "packagesPath": "/home/daniel/.nuget/packages/",
-      "outputPath": "/home/daniel/workspaceDotnet/DIO/DIO.Series/obj/",
+      "outputPath": "/home/daniel/workspaceDotnet/DOTNET/DIO.Series/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/daniel/.nuget/NuGet/NuGet.Config"
