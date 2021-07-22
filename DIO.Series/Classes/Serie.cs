@@ -9,6 +9,7 @@ namespace DIO.Series
 
         private string Descricao { get; set; }
         private int Ano { get; set; }
+        private bool Excluido { get; set; }
 
         public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
@@ -17,13 +18,14 @@ namespace DIO.Series
             this.Titulo = titulo;
             this.Descricao = descricao;
             this.Ano = ano;
-
+            this.Excluido = false;
+            
         }
 
-        public Serie()
+        /* public Serie()
         {
         }
-
+ */
         public override string ToString()
         {
             // Environment.NewLine https://docs.microsoft.com/en-us/dotnet/api/system.environment.newline?view=netcore-3.1
@@ -44,6 +46,10 @@ namespace DIO.Series
         public int retornaId()
         {
             return this.Id;
+        }
+
+        public void Excluir(){
+            this.Excluido = true;
         }
 
     }
