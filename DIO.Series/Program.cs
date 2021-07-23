@@ -20,15 +20,12 @@ namespace DIO.Series
                         break;
                     case "3":
                         AtualizarSerie();
-                        Console.WriteLine(" entrou no case 3");
                         break;
                     case "4":
-                        //ExcluirSerie();
-                        Console.WriteLine(" entrou no case 4");
+                        ExcluirSerie();
                         break;
                     case "5":
-                        //VisualizarSerie();
-                        Console.WriteLine(" entrou no case 5");
+                        VisualizarSerie();
                         break;
                     case "C":
                         Console.Clear();
@@ -36,6 +33,7 @@ namespace DIO.Series
 
                     default:
                         throw new ArgumentOutOfRangeException();
+
                 }
 
                 opcaoUsuario = ObterOpcaoUsuario();
@@ -57,8 +55,10 @@ namespace DIO.Series
 
             foreach (var serie in lista)
             {
-                Console.WriteLine("#ID {0}: - {1}", serie.retornaId(), serie.retornaTitulo());
-                // Console.WriteLine("#ID {0}: - {1}", Serie.retornaId(), Serie.retornaTitulo());
+                var excluido = serie.retornaExcluido();
+
+                Console.WriteLine("#ID {0}: - {1} {2}", serie.retornaId(), serie.retornaTitulo(), (excluido ? "*Excluído*" : ""));
+
             }
 
         }
@@ -98,7 +98,7 @@ namespace DIO.Series
             Console.Write("Digite o id da série: ");
             int indiceSerie = int.Parse(Console.ReadLine());
 
-            
+
             foreach (int i in Enum.GetValues(typeof(Genero)))
             {
                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
@@ -124,7 +124,22 @@ namespace DIO.Series
             repositorio.Atualiza(indiceSerie, atualizaSerie);
         }
 
+        private static void ExcluirSerie()
+        {
+            Console.Write("Digite o id da série: ");
+            int indiceSerie = int.Parse(Console.ReadLine());
 
+            repositorio.Exclui(indiceSerie);
+        }
+        private static void VisualizarSerie()
+        {
+            Console.Write("Digite o id da série: ");
+            int indiceSerie = int.Parse(Console.ReadLine());
+
+            var serie = repositorio.RetornaPorId(indiceSerie);
+
+            Console.WriteLine(serie);
+        }
 
 
 

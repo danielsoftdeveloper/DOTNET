@@ -20,7 +20,7 @@ namespace DIO.Series
 
         public void Insere(Serie objeto)
         {
-           listaSerie.Add(objeto);
+            listaSerie.Add(objeto);
         }
 
         public List<Serie> Lista()
@@ -30,12 +30,12 @@ namespace DIO.Series
 
         public int ProximoId()
         {
-           return listaSerie.Count;
+            return listaSerie.Count;
         }
 
-        public Serie RetornaPorID(int id)
-        {
-            return listaSerie[id];
-        }
+       public Serie RetornaPorId(int id)
+		{
+			return listaSerie[id];
+		}
     }
 }
