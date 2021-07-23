@@ -81,14 +81,22 @@ namespace DIO.Series
             Console.Write("Digite o Ano de Início da Série: ");
             int entradaAno = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite a Descrição da Série: ");
-            string entradaDescricao = Console.ReadLine();
+            Console.Write("Digite a Sinopse ou Descrição da Série: ");
+            string entradaSinopse = Console.ReadLine();
+
+            Console.Write("Digite o nome da produtora da Série: ");
+            string entradaProdutora = Console.ReadLine();
+
+            Console.Write("Digite a nota de avaliaão da Série: ");
+            int entradaNota = int.Parse(Console.ReadLine());
 
             Serie novaSerie = new Serie(id: repositorio.ProximoId(),
                                         genero: (Genero)entradaGenero,
                                         titulo: entradaTitulo,
                                         ano: entradaAno,
-                                        descricao: entradaDescricao);
+                                        sinopse: entradaSinopse,
+                                        produtora: entradaProdutora,
+                                        notaAvaliacao: entradaNota);
 
             repositorio.Insere(novaSerie);
         }
@@ -103,23 +111,31 @@ namespace DIO.Series
             {
                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
             }
-            Console.Write("Digite o gênero entre as opções acima: ");
+            Console.Write("Digite o novo gênero entre as opções acima: ");
             int entradaGenero = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite o Título da Série: ");
+            Console.Write("Digite o novo título da Série: ");
             string entradaTitulo = Console.ReadLine();
 
-            Console.Write("Digite o Ano de Início da Série: ");
+            Console.Write("Digite o novo ano de Início da Série: ");
             int entradaAno = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite a Descrição da Série: ");
-            string entradaDescricao = Console.ReadLine();
+            Console.Write("Digite a nova Sinopse ou Descrição da Série: ");
+            string entradaSinopse = Console.ReadLine();
+
+            Console.Write("Digite o novo nome da produtora da Série: ");
+            string entradaProdutora = Console.ReadLine();
+
+             Console.Write("Digite a nota de avaliaão da Série: ");
+            int entradaNota = int.Parse(Console.ReadLine());
 
             Serie atualizaSerie = new Serie(id: indiceSerie,
                                         genero: (Genero)entradaGenero,
                                         titulo: entradaTitulo,
                                         ano: entradaAno,
-                                        descricao: entradaDescricao);
+                                        sinopse: entradaSinopse,
+                                        produtora: entradaProdutora,
+                                        notaAvaliacao: entradaNota);
 
             repositorio.Atualiza(indiceSerie, atualizaSerie);
         }
@@ -140,10 +156,6 @@ namespace DIO.Series
 
             Console.WriteLine(serie);
         }
-
-
-
-
         private static string ObterOpcaoUsuario()
         {
             Console.WriteLine();
@@ -162,7 +174,6 @@ namespace DIO.Series
             Console.WriteLine();
             return opcaoUsuario;
         }
-
 
     }
 }
